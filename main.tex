@@ -99,9 +99,13 @@ The last section includes a discussion and the conclusions.
 
 \subsection{The Thymio robot}
 
-The Thymio II robot, simply called Thymio in this article, is a desktop differential drive robot (see figure~\ref{fig:thymio}).
-
-
+The Thymio II robot, simply called \textit{Thymio} in this article, is a desktop differential drive robot (see figure~\ref{fig:thymio}).
+Its size is $112 x 110 x 55$mm, and its shape allow to place it on the table in several positions, so that it can become something else as a mobile robot.
+Also its white color has been chosen to keep a look that is age and gender neutral \cite{riedo2013thymio}.
+Despite its affordable price (around 130\$), Thymio a an interesting set of sensors, listed in figure~\ref{fig:thymio}.
+A very specific feature of Thymio is in the high number of LEDs placed over the body, allowing to visualize the activities of the sensors and creating a high interactivity with the user.
+At the software level, Thymio supports the ASEBA framework\cite{magnenat2010aseba} consisting in a virtual machine within the robot and a very flexible communication infrastructure allowing to program the robot and run debugging tools over many several communication channels. 
+In the case of the R2T2 activitiy, we will mainly used the possibility to connect to the robot from a computer through a radio protocol, and then use a switch to enable to connect from anywhere on Internet.
 
 \begin{figure*}[ht]
  \centering
@@ -110,8 +114,24 @@ The Thymio II robot, simply called Thymio in this article, is a desktop differen
   \label{fig:thymio} 
 \end{figure*}
 
+There are several programming interfaces that can generate code for the onboard ASEBA virtual machine. 
+The main three are:
+\begin{enumerate}
+\item A text based environment, illustrated left in figure~\ref{fig:programming}, enabling the use of a simple matlab-like scripting language.
+\item A graphic environment, called \textit{VPL} and illustrated right in figure~\ref{fig:programming}, allowing programming also for non-readers children.
+\item Scratch and Blockly environments that use a graphic layout to place text-based code.
+\end{enumerate}
+
+\begin{figure*}[ht]
+ \centering
+    \includegraphics[width=0.9\columnwidth]{figures/studio-VPL.png}
+  \caption{The two main Thymio programming interfaces: On the left, the text interface, allowing variables real-time visualisation, debugging etc. On the right, the graphical interface for beginners, enabling the definition of sensor-actions associations that can define a behavior.}
+  \label{fig:programming} 
+\end{figure*}
+
 \subsection{The R2T2 concept}
 
+The R2T2 concept aims at bringing together, in a common event, a large number of children from everywhere on the planet with the aim to motivate them to learn about STEM.
 
 \begin{figure*}[ht]
  \centering
