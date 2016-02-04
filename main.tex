@@ -136,13 +136,50 @@ The main three are:
 
 \subsection{The R2T2 concept}
 
-The R2T2 concept aims at bringing together, in a common event, a large number of children from everywhere on the planet with the aim to motivate them to learn about STEM.
+The R2T2 concept aims at bringing together, in a common event, a large number of children from everywhere on the planet, and in Africa in particular, in an activity that motivates them to learn about STEM.
+To keep the budget as low as possible, one solution is to let the participants access remotely the event and the robots, saving the money for travel and saving the cost of the central installation.
+A well-known application based on remote operation of mobile robots is space exploration.
+For children, this type of use of robots is very appealing as it is related to news (Mars exploration) and movies (``The Martian'', for instance).
+Therefore we decided to create the scenario around space robotics.
+
+Once the environment and the mode of access to the robots is set, the next question is about the tasks to be solved.
+Because existing surveys showed that collaborative activities could motivate a larger public than competitive ones~\cite{riedo2013upgrade}, we decided to have a collaborative instead of a classical robot competition. 
+Among the applications that are addressed at EPFL in the National Center for Competence in Research ``Robotics'' supporting this initiative, search and rescue has a central role.
+Therefore we built the following R2T2 story:
+\begin{quotation}
+We are in 2032. A meteorite has damaged an important Martian power station and we need to assess the damage and restart the main generator. We have 16 robots on site. Each robot can be controlled by a team of engineers and space experts from Earth. Between Mars and Earth there is a delay in video transmission (between 3 minutes when Mars is closest and 21 minutes when Mars is farthest from Earth in its orbit) and direct remote control is impossible. Therefore the Earth experts need to program the robots to solve the task. We recruited 16 teams of experts from Switzerland, France, Austria, Italy, Russia and South Africa.
+\end{quotation}
+We indeed recruited 16 teams: 8 from Switzerland (two from Sion, two from Geneva, one from Lausanne, Fribourg, Zürich, and Founex), one from Italy (Borgonovo Val Tidone), four from France (Ayguemorte-les-graves, Floirac, Talence, Vandoeuvre les Nancy), one from Austria (Graz), one from Russia (Moscow) and one from South Africa (Durban). 
+For this first edition we decided to take only one team from Africa, using a network of known partners to test the concept.
 
 \begin{figure*}[ht]
  \centering
-    \includegraphics[width=\columnwidth]{figures/setup-schematic.pdf}
-  \caption{Infrastructure of the R2T2 experiment.}
-  \label{fig:setup-scheme} 
+    \includegraphics[width=0.7\columnwidth]{figures/r2t2_illu.jpg}
+  \caption{Artistic illustration of the R2T2 space rescue scenario.}
+  \label{fig:illustration} 
+\end{figure*}
+
+Each team could access and program a Thymio robot located around the Mars station located in Lausanne. 
+A video feedback was provided by live streaming on YouTube. 
+On YouTube, a chat is provided to exchange messages between the teams.
+
+The Mars station (see figures \ref{fig:map} and \ref{fig:setup-physical}) is supposed to be a power-plant with a central generator surrounded by four identical sectors, called A, B, C, and D.
+Each of them is constituted by an obstructed main door, a back door, a control zone and a generator observation zone.
+Four Thymio robots are located outside of each sector. 
+Their rescue mission consist in 5 phases:
+\begin{enumerate}
+\item Entering the station. This phase requires to have one of the four robots entering by the back door and pushing the block obstructing the main door. Then all robots can enter into the control zone.
+\item Finding the control spots. In the control zone there are four white dots on the black floor. Each robot need to place itself on one of the dots to activate the access to the generator.
+\item Looking to the generator. Once the access activated in all four sectors, each robot has to place itself in a slot around the generator. Each slot has a small window allowing to look into the generator. By using a proximity sensor, each robot can detect when the rotor of the generator is in front of the window.
+\item Evaluate the generator speed. In this phase each robot switch on a light when it sees the rotor of the generator, and switches off when it does not see it. This allow to visualize the rotational speed of the generator from outside.
+\item Restating the generator. This final phase is purely spectacular, as the generator start spinning faster and faster, showing the success of the mission.
+\end{enumerate}
+
+\begin{figure*}[ht]
+ \centering
+    \includegraphics[width=0.6\columnwidth]{figures/map.pdf}
+  \caption{Map of the Mars station with the five phases of the rescue mission.}
+  \label{fig:map} 
 \end{figure*}
 
 \begin{figure*}[ht]
@@ -152,6 +189,26 @@ The R2T2 concept aims at bringing together, in a common event, a large number of
   \caption{Physical setup in EPFL Lausanne and view of the station on YouTube.}
   \label{fig:setup-physical} 
 \end{figure*}
+
+To provide the feedback to the user, five cameras are placed around the station (see figure \ref{fig:setup-physical} left), one for each sector and the fifth providing a top general view (see figure \ref{fig:setup-physical} right).
+In the first three phases the participants can get a detailed view of their sector through the specific camera of their sector, then they can get an overview from the top camera.
+Each view has an associated chat window, allowing the exchange of messages between the people active in this area.
+
+The technical infrastructure supporting the video streaming and the control of the robots is presented in figure \ref{fig:setup-scheme}.
+Behind each camera there is a server encoding the video and streaming it to the YouTube servers. 
+The whole process of encoding, transmitting to the YouTube servers, dispatching to YouTube clients and visualizing, introduces a delay of 30-40 seconds.
+The same computers in charge of the video streaming of the four sectors are also used as bridges for the robot control. 
+Indeed the robot control comes from the participants through Internet and is then routed to the robot using a radio connection. 
+Through this channel, each participant can both visualize robot data in real time, and send motor commands or programs to be executed. 
+
+
+\begin{figure*}[ht]
+ \centering
+    \includegraphics[width=\columnwidth]{figures/setup-schematic.pdf}
+  \caption{Infrastructure of the R2T2 experiment.}
+  \label{fig:setup-scheme} 
+\end{figure*}
+
 
 
 \section{Survey among the children}: results
