@@ -100,7 +100,7 @@ We introduce then the survey made among the participants and the analysis of the
 The last section includes a discussion and the conclusions.
 
 
-\section{The robotic infrastructure}
+\section{The R2T2 event}
 
 \subsection{The Thymio robot}
 
@@ -149,7 +149,7 @@ Therefore we built the following R2T2 story:
 \begin{quotation}
 We are in 2032. A meteorite has damaged an important Martian power station and we need to assess the damage and restart the main generator. We have 16 robots on site. Each robot can be controlled by a team of engineers and space experts from Earth. Between Mars and Earth there is a delay in video transmission (between 3 minutes when Mars is closest and 21 minutes when Mars is farthest from Earth in its orbit) and direct remote control is impossible. Therefore the Earth experts need to program the robots to solve the task. We recruited 16 teams of experts from Switzerland, France, Austria, Italy, Russia and South Africa.
 \end{quotation}
-We indeed recruited 16 teams: 8 from Switzerland (two from Sion, two from Geneva, one from Lausanne, Fribourg, Zürich, and Founex), one from Italy (Borgonovo Val Tidone), four from France (Ayguemorte-les-graves, Floirac, Talence, Vandoeuvre les Nancy), one from Austria (Graz), one from Russia (Moscow) and one from South Africa (Durban). 
+We indeed recruited 16 teams: 8 from Switzerland (two from Sion, two from Geneva, one from Lausanne, Fribourg, Z\"urich, and Founex), one from Italy (Borgonovo Val Tidone), four from France (Ayguemorte-les-graves, Floirac, Talence, Vandoeuvre les Nancy), one from Austria (Graz), one from Russia (Moscow) and one from South Africa (Durban). 
 For this first edition we decided to take only one team from Africa, using a network of known partners to test the concept.
 
 \begin{figure*}[ht]
@@ -193,14 +193,17 @@ Their rescue mission consist in 5 phases:
 To provide the feedback to the user, five cameras are placed around the station (see figure \ref{fig:setup-physical} left), one for each sector and the fifth providing a top general view (see figure \ref{fig:setup-physical} right).
 In the first three phases the participants can get a detailed view of their sector through the specific camera of their sector, then they can get an overview from the top camera.
 Each view has an associated chat window, allowing the exchange of messages between the people active in this area.
+The need of communication between the teams forced us to choose an official language. 
+Because of the majority of team where French speaking, we chose this language for communication.
 
 The technical infrastructure supporting the video streaming and the control of the robots is presented in figure \ref{fig:setup-scheme}.
 Behind each camera there is a server encoding the video and streaming it to the YouTube servers. 
 The whole process of encoding, transmitting to the YouTube servers, dispatching to YouTube clients and visualizing, introduces a delay of 30-40 seconds.
 The same computers in charge of the video streaming of the four sectors are also used as bridges for the robot control. 
 Indeed the robot control comes from the participants through Internet and is then routed to the robot using a radio connection. 
-Through this channel, each participant can both visualize robot data in real time, and send motor commands or programs to be executed. 
-
+Through this channel, each participant can both visualize robot data, and send motor commands or programs to be executed. 
+Although exchange of data and program with the robot are done with very small delay, the effect of the programs or motor commands can be observed only after the delay of the video transmission. 
+From a very detailed technical point of view this does not match the behavior of remote teleoperation on Mars, but the final result for the participants is very similar.
 
 \begin{figure*}[ht]
  \centering
@@ -209,42 +212,171 @@ Through this channel, each participant can both visualize robot data in real tim
   \label{fig:setup-scheme} 
 \end{figure*}
 
+\subsection{The preparation in the teams}
+
+Each team was very different in organization, age and motivation.
+Some team have been organized by schools, other by parents, by associations, by shops, or by universities. 
+Those that were not in French-speaking regions had an additional effort to provide, looking for a person in charge of the communication knowing French. 
+This was in particular the case of the Russian, Italian, Austrian, Swiss (Z\"urich) and South African teams. 
+Most of them had a French teacher among the coaches or ensured to have a French-speaking participant. 
+
+Most of the team organized sessions to prepare the participants.
+Several team leaders were worried about the performance of their teams and prepared more or less intensively their team.
+In some teams, the organization was extremely structured, having officers for communication, for programming, for monitoring etc.
+In South Africa, the decision has been taken to not split the roles, but to leave each participant play different roles. 
+All participants were asked to follow a preparation based on the following steps:
+\begin{itemize}
+\item Installation of the software onto the individual stations used by the students. The team was given a set of four robots and an additional robot for the teachers to experiment with.
+\item Introduction to programming methodology: Students were taken through the process of deconstructing a program into logic, pseudocode and then implementation of relevant programming language. 
+A task was allocated to the team to list the pseudocode and draw a flowchart for the processes associated with making a cup of coffee. Students were then asked to attempt to make the cup of coffee using the instructions they provided. 
+We could observe that students were already exposed to programming and assumed that this was a redundant step, but finally students found that they could not successfully complete the task when following their own instructions. 
+The reason for the failure was due to the lack of consideration and blatant ignorance of the exact steps required to fulfil the task.
+\item Introduction to programming environment: This step introduced students to the concept of using a visual programming interface as opposed to a text based interface.  
+We could observe that students were excited by the ease with which the robot could be programmed using a visual interface. 
+They had only been exposed to text based programming and the graphical representation of functions was welcomed.
+\item Introduction to events and the robotic platform: Students were asked to perform actions based on a command as if they were the robot. 
+This allowed the team to identify the relation between the events and the resulting actions. 
+Students were then asked to associate colors with moods. We could observe that initially students viewed the platform as a toy. 
+This encouraged them to approach the use of the platform in a jovial manner as they were not intimidated by the complex system that lay within the platform. 
+Most of the students associated red with danger and green with a pleasant robot state.
+\item Moving the robot : A task was given to students to move the robot around the table on which they worked. This task exposed them to open loop control of the platform. We ensured that they provided a flowchart and relevant pseudocode for the robot operation in order to complete the task. It was noticed that they showed enthusiasm in testing their predetermined values and make the necessary adjustments in order to follow the path around the desk. It was at this stage that the students started to display intense focus.
+\item Using the sensors and using states in advanced mode: Students were required to explore the capabilities of the sensory capabilities of the robot. 
+They were required to implement a program that would allow the robot to exhibit the behaviour of a pet. 
+This behaviour relied on the use of states in the advanced mode. 
+The team was also given the task of programming the robot to behave in the fashion that their personal pets would.  We could observe that students took more time in completing this task due to the complexity associated with the safety considerations such as ensuring the robot did not fall off the table. 
+Four unique behaviours were observed which included exploratory behaviour, aggressive behaviour and seemingly irrational behaviour (which students insisted was in accordance with the behaviour of their animals).
+\item Use of range of values and angle options: Students had to experiment with using a range of values for the sensors.
+A track was built and robots were required to accelerate uphill and decelerate downhill. 
+Obstacle avoidance was also required.
+Students had no problem in implementing the code once their logic and pseudocode was implemented.
+\end{itemize}
+
+\subsection{The event itself}
+
+The event took place on November 4th, 2015, between 13:30 and 17:00.
+All team managed to reach the final goal.
+We observed many very interesting interaction among the teams, with a very intense activity on the chats.
+Some team were helping others, some gave suggestions, some commented their progress, but all progressed reasonably well.
+A video illustrating the operation of one team is available at \cite{SwissinfoR2T2}.
+
+\section{Survey among the children}
+
+\subsection{Structure of the survey}
+
+To analyze what happened during this event, we asked the participants to fill in an electronic survey.
+After having asked gender and age, we say if the following three sentences were true or not:
+\begin{itemize}
+\item I already did some chat on Internet 	
+\item I already saw video streaming events 	
+\item I had already done activities with robots 
+\item I got some specific training (programming,robotics) for this day, in a group or individually
+\end{itemize}
+We then asked what task was realized during this event, with a choice among:
+\begin{itemize}
+\item Communication with other teams
+\item Supervision of video streaming
+\item Programming of the local (here) robot
+\item Programming of the distant (Mars) robot
+\item Communication towards the outside (twitter, facebook, others)
+\item Coordination
+\item Other (text to be entered)
+\end{itemize}
+We finally asked to indicate the level of agreement or disagreement (four levels: Totally disagree, Somewhat disagree, Somewhat agree, Totally agree) with the following statements:
+\begin{itemize}
+\item A remote robot need to be programmed differently than a robot physically accessible near you 	
+\item Telerobotics requires more reflection on the program 	
+\item Telerobotics requires more reflection before you start programming 	
+\item Telerobotics is boring 	
+\item Telerobotics requires teamwork 	
+\item Telerobotics pushes us to be better organized 	
+\item Telerobotics is closer to a real use of robots 	
+\item Telerobotics brings more fun
+\item I learned a lot during R2T2 	
+\item I learned to work in a team 	
+\item I learned to talk with other teams 	
+\item I learned to program a robot 	
+\item I learned to program differently 	
+\item I learned to better organize my work 	
+\item I better understand what it means to send a robot on Mars 	
+\item I had fun 	
+\item I found everything quite slow and boring
+\end{itemize}
+
+\subsection{Results of the survey}
+
+The survey was filled in by 55 out of about 100 participants. 
+Figure~\ref{fig:age} shows the age histogram of the participants, showing a broad spectrum in age.
+27 percent of the participants were females.
+This is a very high rate of female participants, especially when compared to classical robotic competitions, where woman represent less than 20 percent~\cite{riedo2013upgrade}.
+
+\begin{figure*}[ht]
+ \centering
+    \includegraphics[width=0.5\columnwidth]{figures/Age.png}
+  \caption{Histogram of the age of the participants to the survey.}
+  \label{fig:age} 
+\end{figure*}
+
+We wanted to investigate among the boys and the girls if there were some differences regarding their activities during the event.
+Figure~\ref{fig:activities} shows the participation to the various activities in respect to gender. 
+We can observe a radical difference between gender. 
+Watching for instance the activity related to the programming of the robot, we denote that girls did not have a lot of activities with Thymio II during the event. 
+%Also when analyzing what knowledge and experience children had at the end of the project, we denoted that only 73 percent of girls had the experience in programming of the robot, when it was 100 percent for the boys, meaning that the girls learned to program the robot from basics. 
+Figure~\ref{fig:activities} also shows that the girl were clearly more devoted to tasks related to communication, which explains the fact that they did not program the robots during the event. 
+This shows that the approach applied in South Africa to oblige the children to try all the different tasks, could compensate this natural trend and provide a more balanced experience.
+
+\begin{figure*}[ht]
+ \centering
+    \includegraphics[width=0.7\columnwidth]{figures/activities.png}
+  \caption{Activities made during the event by girl and boys.}
+  \label{fig:activities} 
+\end{figure*}
+
+Figure~\ref{fig:tele} shows the opinions of the participants about telerobotics. 
+At first, it can denote that there were a lot of very positive appreciations. 
+Even though the children have the feeling that ``telerobotics requires more reflection on the program'' and before programming, at the same time they agree that ``telerobotics brings more fun'', therefore they seem to enjoy this aspect of the project, which is very important in an educative perspective. 
+At the same time nearly 90\% of the participants think that this activity requires teamwork which obliged the children to coordinate better inside of their team. 
+Finally one can see that nearly 30\% of the children disagree on the fact that ``telerobotics is closer to a real use of robots'' or that ``a remote robot need to be programmed differently than a robot physically accessible near you''. 
+Both sentences, although in opposite directions, state a difference between telerobotics and other approaches.
+Part of the children disagree with this differences, and a majority seems to agree, probably seeing that telerobotics is at the same time closer to real problems than what they saw until then and has to be programmed differently than robots physically accessible.
+A final element worried us during the event: participants had sometime to wait a long time for another group before being able to move forward with their mission. 
+This was the reason of our check about how boring telerobotics is.
+The result of the survey is encouraging, as only less than 15\% found it boring.
 
 
-\section{Survey among the children}: results
+\begin{figure*}[ht]
+ \centering
+    \includegraphics[width=\columnwidth]{figures/telerobotics.pdf}
+  \caption{Feedback about telerobotics.}
+  \label{fig:tele} 
+\end{figure*}
 
+The children were also asked whether they have learned new topics during the project (Figure~\ref{fig:robotics}). 
+The general appreciation is extremely high, with answers that are 70\% to 90\% positive for all the points beginning by ``I learned''. 
+The highest score goes for ``I learned to work in a team'', which is a key element of this event, especially if combined with the 94\% of ``I had fun''.
+The lowest score among the learned skills goes to ``I learned to program a robot'', as 71\% of the participants stated that they already programmed a robot before.
+But the special nature of the task made that more than 80\% state that ``I learned to program differently''.
+The number of participants finding ``everything quite slow and boring'' is also low and with a strong 65\% of strong disagreement. 
+This is a really positive result, as mentioned above, because the R2T2 event was quite long and there was a risk that the children would get bored waiting. 
+
+\begin{figure*}[ht]
+ \centering
+    \includegraphics[width=0.9\columnwidth]{figures/robotics.pdf}
+  \caption{Feedback about the robotics experience.}
+  \label{fig:robotics} 
+\end{figure*}
+
+\begin{figure*}[ht]
+ \centering
+    \includegraphics[width=0.8\columnwidth]{figures/learned.pdf}
+  \caption{Combination between learned skills and previous competences.}
+  \label{fig:learned} 
+\end{figure*}
 
 
 \section{Discussion and conclusion}
 Government schools in South Africa did not readily offer French as a language course and a high profile secondary school was therefore selected for participation in the event, in order to meet the requirements of having at least one team member who was fluent in French. The theme of the event attracted the top students from various grades within the selected school. These students formed the team that participated in the event and all students in the team had prior experience with programming and hobby kits such as the Arduino Uno programmable controller. 
-The training of the team was made easier due to the fact that the selected students had prior programming knowledge. A set of instructions was supplied with the Thymio kit along with a training manual which introduced the user to the various functions and capabilities of the robot. The method used to train the students involved implementation of the training manual and this was supplemented with allocating tasks specific to the environment in which the team worked. Table … lists the progression of the training performed with the students. This progression followed the installation of the software onto the individual stations used by the students. The team was given a set of four robots and an additional robot for the teachers to experiment with. 
-
-\begin{table}
-\centering
-\caption{Progression of the training performed on selected South African students}
-\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|} \hline
-Task from training manual & Supplementary task & Observation of students \\\hline
-N/A &  Introduction to programming methodology: Students were taken through the process of deconstructing a program into logic, pseudocode and then implementation of relevant programming language. A task was allocated to the team to list the pseudocode and draw a flowchart for the processes associated with making a cup of coffee. Students were then asked to attempt to make the cup of coffee using the instructions they provided. &
-Students were already exposed to programming and assumed that this was a redundant step. Students found that they could not successfully complete the task when following their own instructions. The reason for the failure was due to the lack of consideration and blatant ignorance of the exact steps required to fulfil the task. \\\hline
-Introduction to programming environment: This step introduced students to the concept of using a visual programming interface as opposed to a text based interface.  &
-None &
-Students were excited by the ease with which the robot could be programmed using a visual interface. They had only been exposed to text based programming and the graphical representation of functions was welcomed. \\\hline
-Introduction to events and the robotic platform &
-Students were asked to perform actions based on a command as if they were the robot. This allowed the team to identify the relation between the events and the resulting actions. Students were then asked to associate colours with moods. &
-Students viewed the platform as a toy initially. This encouraged them to approach the use of the platform in a jovial manner as they were not intimidated by the complex system that lay within the platform. Most of the students associated red with danger and green with a pleasant robot state.  \\\hline
-Moving the robot : Students were required to move the robot back and forth &
-A task was given to students to move the robot around the table on which they worked. This task exposed them to open loop control of the platform. &
-Students ensured that they provided a flowchart and relevant pseudocode for the robot operation in order to complete the task. It was noticed that they showed enthusiasm in testing their predetermined values and make the necessary adjustments in order to follow the path around the desk. It was at this stage that the students started to display intense focus. \\\hline
-Using the sensors and using states in advanced mode: Students were required to explore the capabilities of the sensory capabilities of the robot. They were required to implement a program that would allow the robot to exhibit the behaviour of a pet. This behaviour relied on the use of states in the advanced mode. &
-The team was also given the task of programming the robot to behave in the fashion that their personal pets would.  &
-Students took more time in completing this task due to the complexities associated with the safety considerations such as ensuring the robot did not fall off the table. Four unique behaviours were observed which included exploratory behaviour, aggressive behaviour and seemingly irrational behaviour (which students insisted was in accordance with the behaviour of their animals). \\\hline
-Use of range of values and angle options: Students had to experiment with using a range of values for the sensors. &
-A track was built and robots were required to accelerate uphill and decelerate downhill. Obstacle avoidance was also required.  &
-Students had no problem in implementing the code once their logic and pseudocode was implemented. \\\hline
-
-\end{tabular}
-
-\end{table}
+The training of the team was made easier due to the fact that the selected students had prior programming knowledge. A set of instructions was supplied with the Thymio kit along with a training manual which introduced the user to the various functions and capabilities of the robot. The method used to train the students involved implementation of the training manual and this was supplemented with allocating tasks specific to the environment in which the team worked. 
+%Table … lists the progression of the training performed with the students. This progression followed the installation of the software onto the individual stations used by the students. The team was given a set of four robots and an additional robot for the teachers to experiment with. 
 
 
 
