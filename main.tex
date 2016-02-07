@@ -63,7 +63,7 @@ They often encourage self-autonomy and collaboration within each team of partici
 Sadly these activities and events are often pursued with the upper-class schools, who have the computer facilities, an internet connection, and teachers who have been enthusiastic to educate the students with resources above those in the normal syllabus. 
 For instance some scholars are able to attend robotics at the Cape Town Science Center as an extra mural activity, yet payment is required to be made to attend these sessions~\cite{Capets}.
 
-These events are organized also in Europe, rising some similar issues but in another context.
+Robotics events to promote STEM are organized also in Europe, rising some similar issues but in another context.
 Robot competitions, in Europe, attract only participants already interested in STEM topics, and have very few impact on most people~\cite{riedo2013upgrade}.
 Moreover very few women are participating in these events, contributing to a gender gap on education about technology~\cite{riedo2013upgrade}.
 In some extent the elitist aspect of these competitions is similar to South Africa, even if expressed differently.
@@ -75,24 +75,25 @@ In South Africa the economic factor plays a more important role, but the Europea
 In both realities it would be interesting to have activities that generate a broader interest, better motivate the teachers, can reach a broader public and are economically affordable.
 
 
+When addressing these problems, the first issue is choosing a robot.
 There exist many different robotics kit available for STEM education. 
 The Thymio II robot has been indicated as an appropriate robotic platform to pursue STEM in Africa~\cite{Gyebi2015}, as it is an open source platform with a sensory system that include a microphone, IR proximity sensors, temperature sensor, odometer and accelerometers, with the use of open source programming language, Aseba~\cite{magnenat2010aseba}. 
 The Thymio robot has been broadly spread in schools in Europe\cite{roy2015inirobot}, and used as a tool for teaching many topics, from physics~\cite{Mubin2013} to computer science~\cite{magnenat2014}. 
-Even though the Thymio robot has been one of the more expensive educational robots that have been used in Africa~\cite{Gyebi2015}, it has been cheaper than the Lego Mindstorm EV3 robots, and it has been one of the best robots with processing, sensors, deployment, development and maintenance.
+Even though the Thymio robot has been one of the more expensive educational robots that have been used in Africa~\cite{Gyebi2015}, it is ways cheaper than the Lego Mindstorm EV3 robots, and it has been one of the best robots with processing, sensors, deployment, development and maintenance.
 
 
-This paper presents an education activity, called R2T2, addressing the issues above by using the opportunity offered by the Thymio robot. 
+This paper presents an education activity, called R2T2 (for \textit{Remote Rescue using Thymio2}), addressing the issues above by using the opportunity offered by the Thymio robot. 
 In opposition to the existing events, R2T2 focus on a collaborative task, based on a rescue operation where several groups need to cooperate.
 To gain attractiveness, the rescue scenario is set on a mars station. 
 Therefore the participants access to the installation remotely, which is an interesting economical aspect, as the expensive installation is shared and nobody needs to travel.
 Moreover this allow to bring together people living in very distant places, with different cultures and technical background. In this case, we used this possibility to bring together European and African children, which creates very interesting interactions, from emulation to help.
-This scenario allows also to add and justify an key aspect of the interaction with the robots: the delay between command to the robot and video feedback. 
+This scenario allows also to add and justify a key aspect of the interaction with the robots: a delay between command to the robot and video feedback. 
 This delay is necessary to ensure the video streaming but is also realistic in respect to an operation on Mars.
 From an education perspective, this delay defines the way participants can interact with their robots, excluding the possibility to remote control the robots and forcing the participants to program them.
-Finally the R2T2 rescue scenario requires the coordination of 16 teams controlling 16 robots placed in the Mars station, and therefore allows to include in the event other activities than robot programming: coordination within the team and with other teams, communication, planning, validation of distant results, etc.
+Finally our R2T2 rescue scenario requires the coordination of 16 teams controlling 16 robots placed in the Mars station, and therefore allows to include in the event other activities than robot programming: coordination within the team and with other teams, communication, planning, validation of distant results, etc.
 This broad spectrum of activities enable the inclusion of teachers from various disciplines and participants with different interests.
 
-The R2T2 event took place in November 2015, bringing together 100 participants from Europe and Africa. 
+The first R2T2 event took place in November 2015, bringing together more than 100 participants from Europe and Africa. 
 A survey allowed to spot the interesting value of this event, as well as the specificity of the European and African participants.
 
 After this introduction, the next section introduces the Thymio robot and the R2T2 event. 
@@ -105,12 +106,12 @@ The last section includes a discussion and the conclusions.
 \subsection{The Thymio robot}
 
 The Thymio II robot, simply called \textit{Thymio} in this article, is a desktop differential drive robot (see figure~\ref{fig:thymio}).
-Its size is $112 x 110 x 55$mm, and its shape allow to place it on the table in several positions, so that it can become something else as a mobile robot.
-Also its white color has been chosen to keep a look that is age and gender neutral \cite{riedo2013thymio}.
-Despite its affordable price (around 130\$), Thymio a an interesting set of sensors, listed in figure~\ref{fig:thymio}.
-A very specific feature of Thymio is in the high number of LEDs placed over the body, allowing to visualize the activities of the sensors and creating a high interactivity with the user.
-At the software level, Thymio supports the ASEBA framework\cite{magnenat2010aseba} consisting in a virtual machine within the robot and a very flexible communication infrastructure allowing to program the robot and run debugging tools over many several communication channels. 
-In the case of the R2T2 activitiy, we will mainly used the possibility to connect to the robot from a computer through a radio protocol, and then use a switch to enable to connect from anywhere on Internet.
+Its size is $112 x 110 x 55$mm, and its shape allow to use it on a table in several positions, so that it can become something else as a mobile robot.
+Its white color has been chosen to keep a look that is age and gender neutral \cite{riedo2013thymio}.
+Despite its affordable price (around 130\$), Thymio has an interesting set of sensors, listed in figure~\ref{fig:thymio}.
+A very specific feature of Thymio is the high number of LEDs placed over the body, allowing to visualize the activities of the sensors and thus enabling a high interactivity with the user.
+At the software level, Thymio supports the ASEBA framework \cite{magnenat2010aseba} consisting in a virtual machine running in the robot processor and a very flexible communication infrastructure allowing to program the robot and run debugging tools over many several communication channels. 
+In the case of the R2T2 activitiy, we mainly used the possibility to connect to the robot from a computer through a radio protocol, and then use a switch to enable to connect from anywhere on Internet.
 
 \begin{figure*}[ht]
  \centering
@@ -136,21 +137,21 @@ The main three are:
 
 \subsection{The R2T2 concept}
 
-The R2T2 concept aims at bringing together, in a common event, a large number of children from everywhere on the planet, and in Africa in particular, in an activity that motivates them to learn about STEM.
+The R2T2 concept aims at bringing together a large number of children from everywhere on the planet, and in Africa in particular, in a common, highly visible, and motivating event that bring them to learn about STEM.
 To keep the budget as low as possible, one solution is to let the participants access remotely the event and the robots, saving the money for travel and saving the cost of the central installation.
 A well-known application based on remote operation of mobile robots is space exploration.
-For children, this type of use of robots is very appealing as it is related to news (Mars exploration) and movies (``The Martian'', for instance).
-Therefore we decided to create the scenario around space robotics.
+For children, this use of robots is very appealing as it is related to news (Mars exploration) and movies (``The Martian'', for instance).
+Therefore we decided to create a scenario around space robotics.
 
 Once the environment and the mode of access to the robots is set, the next question is about the tasks to be solved.
-Because existing surveys showed that collaborative activities could motivate a larger public than competitive ones~\cite{riedo2013upgrade}, we decided to have a collaborative instead of a classical robot competition. 
+Because existing surveys showed that collaborative activities could motivate a larger public than competitive ones~\cite{riedo2013upgrade}, we decided to have a collaborative task instead of a classical robot competition. 
 Among the applications that are addressed at EPFL in the National Center for Competence in Research ``Robotics'' supporting this initiative, search and rescue has a central role.
-Therefore we built the following R2T2 story:
+Therefore we built the following R2T2 story (see illustration in Figure \ref{fig:illustration}):
 \begin{quotation}
 We are in 2032. A meteorite has damaged an important Martian power station and we need to assess the damage and restart the main generator. We have 16 robots on site. Each robot can be controlled by a team of engineers and space experts from Earth. Between Mars and Earth there is a delay in video transmission (between 3 minutes when Mars is closest and 21 minutes when Mars is farthest from Earth in its orbit) and direct remote control is impossible. Therefore the Earth experts need to program the robots to solve the task. We recruited 16 teams of experts from Switzerland, France, Austria, Italy, Russia and South Africa.
 \end{quotation}
-We indeed recruited 16 teams: 8 from Switzerland (two from Sion, two from Geneva, one from Lausanne, Fribourg, Z\"urich, and Founex), one from Italy (Borgonovo Val Tidone), four from France (Ayguemorte-les-graves, Floirac, Talence, Vandoeuvre les Nancy), one from Austria (Graz), one from Russia (Moscow) and one from South Africa (Durban). 
-For this first edition we decided to take only one team from Africa, using a network of known partners to test the concept.
+We indeed recruited 16 teams: 8 from Switzerland (two from Sion, two from Geneva, one from Lausanne, one from Fribourg, one from Z\"urich, and one from Founex), one from Italy (Borgonovo Val Tidone), four from France (Ayguemorte-les-graves, Floirac, Talence, Vandoeuvre les Nancy), one from Austria (Graz), one from Russia (Moscow) and one from South Africa (Durban). 
+For this first edition we decided to take only one team from Africa, using a network of known partners to test the concept  and giving it a better chance of success.
 
 \begin{figure*}[ht]
  \centering
@@ -159,13 +160,13 @@ For this first edition we decided to take only one team from Africa, using a net
   \label{fig:illustration} 
 \end{figure*}
 
-Each team could access and program a Thymio robot located around the Mars station located in Lausanne. 
+Each team could access and program a Thymio robot located around the Mars station model located in Lausanne. 
 A video feedback was provided by live streaming on YouTube. 
 On YouTube, a chat is provided to exchange messages between the teams.
 
-The Mars station (see figures \ref{fig:map} and \ref{fig:setup-physical}) is supposed to be a power-plant with a central generator surrounded by four identical sectors, called A, B, C, and D.
-Each of them is constituted by an obstructed main door, a back door, a control zone and a generator observation zone.
-Four Thymio robots are located outside of each sector. 
+The Mars station (see map in Figure \ref{fig:map} and pictures in Figure \ref{fig:setup-physical}) is supposed to be a power-plant with a central generator surrounded by four identical sectors, called A, B, C, and D.
+Each of them is constituted by an main door obstructed by a collapsed structure, a back door, a control zone and a generator observation zone.
+Four Thymio robots are located outside each sector. 
 Their rescue mission consist in 5 phases:
 \begin{enumerate}
 \item Entering the station. This phase requires to have one of the four robots entering by the back door and pushing the block obstructing the main door. Then all robots can enter into the control zone.
@@ -178,7 +179,7 @@ Their rescue mission consist in 5 phases:
 \begin{figure*}[ht]
  \centering
     \includegraphics[width=0.6\columnwidth]{figures/map.pdf}
-  \caption{Map of the Mars station with the five phases of the rescue mission.}
+  \caption{Map of the 4m x 4m Mars station model with the five phases of the rescue mission.}
   \label{fig:map} 
 \end{figure*}
 
@@ -192,17 +193,17 @@ Their rescue mission consist in 5 phases:
 
 To provide the feedback to the user, five cameras are placed around the station (see figure \ref{fig:setup-physical} left), one for each sector and the fifth providing a top general view (see figure \ref{fig:setup-physical} right).
 In the first three phases the participants can get a detailed view of their sector through the specific camera of their sector, then they can get an overview from the top camera.
-Each view has an associated chat window, allowing the exchange of messages between the people active in this area.
+Each view has an associated chat window, allowing the exchange of messages between the people active in this area and an operator in charge of the sector, physically located in Lausanne, near the station model (see figure \ref{fig:setup-physical} left).
 The need of communication between the teams forced us to choose an official language. 
 Because of the majority of team where French speaking, we chose this language for communication.
 
 The technical infrastructure supporting the video streaming and the control of the robots is presented in figure \ref{fig:setup-scheme}.
 Behind each camera there is a server encoding the video and streaming it to the YouTube servers. 
-The whole process of encoding, transmitting to the YouTube servers, dispatching to YouTube clients and visualizing, introduces a delay of 30-40 seconds.
+The whole process of encoding, transmitting to the YouTube servers, dispatching to YouTube clients and visualizing, introduces a delay of 30-60 seconds.
 The same computers in charge of the video streaming of the four sectors are also used as bridges for the robot control. 
 Indeed the robot control comes from the participants through Internet and is then routed to the robot using a radio connection. 
-Through this channel, each participant can both visualize robot data, and send motor commands or programs to be executed. 
-Although exchange of data and program with the robot are done with very small delay, the effect of the programs or motor commands can be observed only after the delay of the video transmission. 
+Through this channel, each participant can both visualize robot data, and send motor commands or programs to be executed by the robot. 
+Although exchange of data and program with the robot are done with very small delays, the effect of the programs or motor commands can be observed only after the delay of the video transmission. 
 From a very detailed technical point of view this does not match the behavior of remote teleoperation on Mars, but the final result for the participants is very similar.
 
 \begin{figure*}[ht]
@@ -212,18 +213,18 @@ From a very detailed technical point of view this does not match the behavior of
   \label{fig:setup-scheme} 
 \end{figure*}
 
-\subsection{The preparation in the teams}
+\subsection{The preparation of the teams}
 
 Each team was very different in organization, age and motivation.
-Some team have been organized by schools, other by parents, by associations, by shops, or by universities. 
+Some teams have been organized by schools, other by parents, by associations, by shops, or by universities. 
 Those that were not in French-speaking regions had an additional effort to provide, looking for a person in charge of the communication knowing French. 
 This was in particular the case of the Russian, Italian, Austrian, Swiss (Z\"urich) and South African teams. 
 Most of them had a French teacher among the coaches or ensured to have a French-speaking participant. 
 
 Most of the team organized sessions to prepare the participants.
 Several team leaders were worried about the performance of their teams and prepared more or less intensively their team.
-In some teams, the organization was extremely structured, having officers for communication, for programming, for monitoring etc.
-In South Africa, the decision has been taken to not split the roles, but to leave each participant play different roles. 
+In some teams, the organization was extremely structured, defining `officers'' for communication, for programming, for monitoring etc.
+In South Africa, the decision has been taken to not split the roles, but to leave each participant play different roles during the whole event. 
 All participants were asked to follow a preparation based on the following steps:
 \begin{itemize}
 \item Installation of the software onto the individual stations used by the students. The team was given a set of four robots and an additional robot for the teachers to experiment with.
@@ -243,7 +244,7 @@ Most of the students associated red with danger and green with a pleasant robot 
 \item Using the sensors and using states in advanced mode: Students were required to explore the capabilities of the sensory capabilities of the robot. 
 They were required to implement a program that would allow the robot to exhibit the behaviour of a pet. 
 This behaviour relied on the use of states in the advanced mode. 
-The team was also given the task of programming the robot to behave in the fashion that their personal pets would.  We could observe that students took more time in completing this task due to the complexity associated with the safety considerations such as ensuring the robot did not fall off the table. 
+The team was also given the task of programming the robot to behave in the way that their personal pets would.  We could observe that students took more time in completing this task due to the complexity associated with the safety considerations such as ensuring the robot did not fall off the table. 
 Four unique behaviours were observed which included exploratory behaviour, aggressive behaviour and seemingly irrational behaviour (which students insisted was in accordance with the behaviour of their animals).
 \item Use of range of values and angle options: Students had to experiment with using a range of values for the sensors.
 A track was built and robots were required to accelerate uphill and decelerate downhill. 
@@ -253,7 +254,7 @@ Students had no problem in implementing the code once their logic and pseudocode
 
 \subsection{The event itself}
 
-The event took place on November 4th, 2015, between 13:30 and 17:00.
+The event took place on November 4th, 2015, between 13:30 and 17:00 (UTC+01:00).
 All team managed to reach the final goal.
 We observed many very interesting interaction among the teams, with a very intense activity on the chats.
 Some team were helping others, some gave suggestions, some commented their progress, but all progressed reasonably well.
@@ -264,14 +265,14 @@ A video illustrating the operation of one team is available at \cite{SwissinfoR2
 \subsection{Structure of the survey}
 
 To analyze what happened during this event, we asked the participants to fill in an electronic survey.
-After having asked gender and age, we say if the following three sentences were true or not:
+After having asked gender and age, we asked if, for them, the following four sentences were true or not:
 \begin{itemize}
 \item I already did some chat on Internet 	
 \item I already saw video streaming events 	
-\item I had already done activities with robots 
+\item I have already done activities with robots 
 \item I got some specific training (programming,robotics) for this day, in a group or individually
 \end{itemize}
-We then asked what task was realized during this event, with a choice among:
+We then asked which task they realized during this event, with a choice among:
 \begin{itemize}
 \item Communication with other teams
 \item Supervision of video streaming
@@ -304,10 +305,10 @@ We finally asked to indicate the level of agreement or disagreement (four levels
 
 \subsection{Results of the survey: general impact}
 
-The survey was filled in by 55 out of about 100 participants. 
+The survey was filled in by 57 out of about 100 participants. 
 Figure~\ref{fig:age} shows the age histogram of the participants, showing a broad spectrum in age.
 27 percent of the participants were females.
-This is a very high rate of female participants, especially when compared to classical robotic competitions, where woman represent less than 20 percent~\cite{riedo2013upgrade}.
+This is a very high rate of female participants, especially when compared to classical robotic competitions, where women represent less than 20 percent~\cite{riedo2013upgrade}.
 
 \begin{figure*}[ht]
  \centering
@@ -316,12 +317,12 @@ This is a very high rate of female participants, especially when compared to cla
   \label{fig:age} 
 \end{figure*}
 
-We wanted to investigate among the boys and the girls if there were some differences regarding their activities during the event.
+We wanted to investigate among boys and girls if there were some differences regarding their activities during the event.
 Figure~\ref{fig:activities} shows the participation to the various activities in respect to gender. 
-We can observe a radical difference between gender. 
+We can observe a radical difference between male and female participants. 
 Watching for instance the activity related to the programming of the robot, we denote that girls did not have a lot of activities with Thymio II during the event. 
 %Also when analyzing what knowledge and experience children had at the end of the project, we denoted that only 73 percent of girls had the experience in programming of the robot, when it was 100 percent for the boys, meaning that the girls learned to program the robot from basics. 
-Figure~\ref{fig:activities} also shows that the girl were clearly more devoted to tasks related to communication, which explains the fact that they did not program the robots during the event. 
+Figure~\ref{fig:activities} also shows that the girls were clearly more devoted to tasks related to communication, which explains the fact that they did not program the robots during the event. 
 This shows that the approach applied in South Africa to oblige the children to try all the different tasks, could compensate this natural trend and provide a more balanced experience.
 
 \begin{figure*}[ht]
@@ -333,13 +334,14 @@ This shows that the approach applied in South Africa to oblige the children to t
 
 Figure~\ref{fig:tele} shows the opinions of the participants about telerobotics. 
 At first, it can denote that there were a lot of very positive appreciations. 
-Even though the children have the feeling that ``telerobotics requires more reflection on the program'' and before programming, at the same time they agree that ``telerobotics brings more fun'', therefore they seem to enjoy this aspect of the project, which is very important in an educative perspective. 
+Even though the children have the feeling that ``telerobotics requires more reflection on the program'' and also before programming, at the same time they agree that ``telerobotics brings more fun''. 
+They seem to enjoy this challenging aspect of the project, which is very important in an educative perspective. 
 At the same time nearly 90\% of the participants think that this activity requires teamwork which obliged the children to coordinate better inside of their team. 
 Finally one can see that nearly 30\% of the children disagree on the fact that ``telerobotics is closer to a real use of robots'' or that ``a remote robot need to be programmed differently than a robot physically accessible near you''. 
 Both sentences, although in opposite directions, state a difference between telerobotics and other approaches.
 Part of the children disagree with this differences, and a majority seems to agree, probably seeing that telerobotics is at the same time closer to real problems than what they saw until then and has to be programmed differently than robots physically accessible.
 A final element worried us during the event: participants had sometime to wait a long time for another group before being able to move forward with their mission. 
-This was the reason of our check about how boring telerobotics is.
+This was the reason of our question about how boring telerobotics is.
 The result of the survey is encouraging, as only less than 15\% found it boring.
 
 
@@ -350,12 +352,12 @@ The result of the survey is encouraging, as only less than 15\% found it boring.
   \label{fig:tele} 
 \end{figure*}
 
-The children were also asked whether they have learned new topics during the project (Figure~\ref{fig:robotics}). 
+The children were also asked whether they have learned new topics by participating to R2T2 (Figure~\ref{fig:robotics}). 
 The general appreciation is extremely high, with answers that are 70\% to 90\% positive for all the points beginning by ``I learned''. 
-The highest score goes for ``I learned to work in a team'', which is a key element of this event, especially if combined with the 94\% of ``I had fun''.
+The highest score goes for ``I learned to work in a team'', which is a key element of this event, especially if combined with the 94\% of ``I had fun'', showing that learning was enjoyable.
 The lowest score among the learned skills goes to ``I learned to program a robot'', as 71\% of the participants stated that they already programmed a robot before.
 But the special nature of the task made that more than 80\% state that ``I learned to program differently''.
-The number of participants finding ``everything quite slow and boring'' is also low and with a strong 65\% of strong disagreement. 
+The number of participants finding ``everything quite slow and boring'' is also low and with 65\% of total disagreement. 
 This is a really positive result, as mentioned above, because the R2T2 event was quite long and there was a risk that the children would get bored waiting. 
 
 \begin{figure*}[ht]
@@ -370,8 +372,8 @@ This confirms several other observations done above.
 In particular we have a confirmation that female participants started with lower competences in robot programming but also learned much less than their male colleagues. 
 The situation for another technical aspect of the activity, video streaming, is similar. 
 The situation for communication is opposite, while the males still consider they have learned as much as the females participants. 
-It is hard to clearly show the causality here, as female participants could have chosen communication tasks because they were more competent in this area. 
-But what we can observe is that the activity nearly amplified this trend, at least in term of learning. 
+It is hard to clearly show if women where limited in their choice or if they preferred this role because they were more competent in this area. 
+But what we can observe is that the activity nearly amplified this male-female gap, at least in term of learning. 
 
 
 \begin{figure*}[ht]
@@ -384,14 +386,14 @@ But what we can observe is that the activity nearly amplified this trend, at lea
 \subsection{Results of the survey: Africa versus Europe}
 
 After having looked into the general impact of the activity, we can look in more detail into the answers of the European and African participants. 
-Although the survey was anonymous, the IP number of the computer used to enter the survey was used to extract the country of the participant.
+Although the survey was anonymous, the IP number of the computer used to enter the survey was used to extract the country of the participants.
 This analysis has to be considered with care, as only 8 participants represent South Africa in this survey, agains 49 for Europe.
 
 
-Figure~\ref{fig:EU-SA} show an overall picture an all feedbacks about telerobotics and learning.
+Figure~\ref{fig:EU-SA} show an overall picture on all feedbacks about telerobotics and learning.
 What appears clearly is that African participants are regularly more enthusiastic, have a higher consideration for the activity and perceive a higher learning outcome. 
-For several statements we have 100\% or strong agreement: ``I had fun'', ``I learned a lot in R2T2'', and ``Telerobotics pushes us to be better organized''.
-Together, these three statements give a clear character to this activity, perfectly mixing fun and learning, but also including, into the learning experience, several methodological aspect of team working. 
+For several statements we have 100\% of total agreement by South African participants: ``I had fun'', ``I learned a lot in R2T2'', and ``Telerobotics pushes us to be better organized''.
+Together, these three statements give a clear character to this activity in South Africa, perfectly mixing fun and learning, but also including, into the learning experience, several methodological aspects we already observed during the preparation of the team. 
 
 \begin{figure*}[ht]
  \centering
@@ -401,7 +403,7 @@ Together, these three statements give a clear character to this activity, perfec
 \end{figure*}
 
 If we look again into the added value of the activity, expressed as a comparison between competences that the participants had before the event and those they consider having learned, we get the results illustrated in Figure~\ref{fig:EU-SA-learn}.
-This shows a dramatic difference in competences before the event, with the African participants having very little experience in the technologies used in this activity, and the Europeans having a very good experience especially in robot programming. 
+This shows a dramatic difference in competences before the event between African and European participants, with the African ones having very little experience in the technologies used in this activity, and the Europeans having a very good experience especially in robot programming. 
 The perceived learning impact is much more important for African participants than European ones. 
 
 \begin{figure*}[ht]
@@ -414,7 +416,7 @@ The perceived learning impact is much more important for African participants th
 
 \section{Discussion and conclusion}
 
-This first online integration of young students from Africa and Europe in a collaborative activity has highlighted some difficulties of the approach but also an impressive potential.
+This first online integration of young students from Africa and Europe in a collaborative robotics activity has highlighted some difficulties of the approach but also an impressive potential.
 
 Among the problems we can mention the language and the internet infrastructure.
 The choice of French as communication language, although common in several African countries, was problematic for South Africa.
@@ -426,7 +428,7 @@ We also observed that viewing the same video stream through a smartphone and a G
 This was challenging for the participants, creating a kind of insecurity when sending a robot command.
 We planned to stream back a video of the team, but we finally cancelled it when we realized that the YouTube footage was not recorded properly.
 
-Despite these problems, solved during this activity, the potential of the concept has shown to be impressive.
+Despite these problems, the potential of the concept has shown to be impressive.
 In general, all participants were enthusiastic about the topic, the challenge, the international nature of the event and the broad spectrum of activities. 
 Some of the coaches that could compare qualitatively the engagement of the participants in this event with those seen in robot competitions, could assess that the engagement was very similar, despite the collaborative nature of the task. 
 But in contrast to robot competitions, none of the team had to accept a defeat at the end of the day, all being successful together. 
@@ -438,8 +440,8 @@ A set of instructions was supplied with the Thymio kit along with a training man
 The method used to train the students involved implementation of the training manual and this was supplemented with allocating tasks specific to the environment in which the team worked. 
 
 The delay introduced by the video streaming and the impossibility to access physically the robot changed radically the way the participants could approach the problem.
-The rapid coding and testing without thinking becomes impossible, as a download and execution of code in the robot has a high cost in time and the results cannot be reverted. 
-Moreover the effect can be observed only after a given delay, increasing the impact of mistakes.
+The rapid coding and testing without thinking became impossible, as a download and execution of code in the robot had a high cost in time and the results could not be reverted. 
+Moreover the effect could be observed only after an important delay, increasing the impact of mistakes.
 This way of working, closer to a real situation of a team of engineers, was extremely appreciated by the participants, who had clearly fun during this afternoon.
 At the same time these working conditions were extremely demanding in coordination, preparation, thinking before programming etc. 
 A great majority of the participants reports having learned a lot about team coordination and methodology of work, which is a key element in learning.
@@ -448,12 +450,13 @@ The participants were frustrated at times when things did not happen as they exp
 They learned very quickly to follow the advice, and to work in a team, to first simulate instruction on the robot they had within the lab, before sending the instruction to the robot.
 After the participants changed their approach, they were quickly more successful with attempting the challenges. 
 
-It has been found to be the most challenging aspect with the teaching of robotic systems within South Africa, with the sequential steps in the programming of the robots. 
+The most challenging aspect with the teaching of robotic systems within South Africa is the methodology, with the sequential steps in the programming of the robots. 
 It is found that the scholars are able to grasp the mechanical component quite easily, as they have been exposed to building structures, whether it is with sand, stones, sticks, or even more advanced material such as building bricks, Lego blocks or metal materials. 
 The understanding of the electronic component is grasped a little more difficult, yet with the scholars being exposed to more electronic systems and being taught electrical circuits from a young age, they are able to connect the different components and modules together. 
 The aspect that scholars have difficulty with is the programming. 
 Even though they are taught of planning with flowcharts and pseudocode, and indicated that they must think of themselves being the robot and the steps that is needed to be followed, the scholars have a difficulty with sequential instructions. 
 The R2T2 activity is an extremely elegant way to bring them in a situation where they can well understand by their practice how important it is to address problems with a clear methodology. 
+Their feedback in the survey shows that they grasped the importance of this aspect and learned how to improve it.
 
 %There are many factors for the scholars to have a difficulty to understand this concept, and it could be due to everything happening lately automatically, with less problem solving, as technology has developed, and also due to scholars not being exposed to programming at a younger age. Typically, within South Africa, some scholars are only exposed to programming for the first time in grade 8, otherwise only in grade 10 should they have taken computer science as a secondary school subject. It has also been found that some students are only exposed to programming when they reach university level, as their school did not have computer facilities and limited technology equipment. It is believed that this hurdle will only be overcome once programming skills are to be taught from the beginning of the scholar's school career, which can be pursued with activities such as placing the sequence of event into order with the different activities they need to perform to get to school every morning. Similar activities will make the scholars to have a better understanding with sequential programming in the future.
 
@@ -465,10 +468,10 @@ We saw, among the teachers, French professors that were interested in the experi
 We cannot have evidence but we can speculate that this also helped in getting a broader spectrum of participants, breaking the mechanism often in place of attraction only of STEM-interested people.
 
 Finally the perception of learned lessons by the participants is impressive, especially among the participants of South Africa.
-Their inclusion in an activity involving European participants, who have a better background in technological issue can have a clear positive impact through emulation, instead of competition as often practiced. 
+Their inclusion in an activity involving European participants, who have a better background in technological fields can have a clear positive impact through emulation, instead of competition as often practiced. 
 
 The learning quality of engineering disciplines has to face several issues in developed countries, such as distance and cost or materials, which could be address through distance learning~\cite{winthrop2012new}. 
-This first R2T2 event showed how distant participation to a common event can not only impact costs of infrastructure and travel, but can bring key educational elements and promote inclusion at various levels, geographical and disciplinary.
+This first R2T2 event showed how distant participation to a common event can not only impact costs of infrastructure and travel, but can bring key educational elements and promote inclusion at various levels, among geographically far countries, but also among disciplines and genders.
 
 \bibliography{r2t2}{}
 
