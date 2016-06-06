@@ -14,7 +14,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass{intech-journal}
-
+\usepackage[utf8]{inputenc}
+\setlength{\belowcaptionskip}{-4pt}
+\usepackage{enumitem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 
 %%%  Note that amsfonts,amstext,amssymb,amsmath,amsthm,amscd
@@ -91,7 +93,7 @@ To enhance the attractiveness of the program, the rescue scenario is set on a Ma
 Accordingly, the participants must access the physical station model remotely.
 This has several advantages. 
 First, the set-up is cost-effective, as the expense of the installation is centralized but nobody needs to travel.
-In addition, this arrangement allows to brings together people who live in far-flung places, with different cultures and technical backgrounds. 
+In addition, this arrangement allows to bring together people from different cultures and technical backgrounds who live in far-flung places. 
 Specifically, it allows European and African children to collaborate, which allows for very interesting interactions whereby children can emulate and help each other.
 This scenario also enables the introduction and justification of a key aspect of interaction with robots: a delay between commands issued to the robot and video feedback. 
 This delay is necessary to ensure video streaming, but also realistically reflects an operation on Mars.
@@ -153,7 +155,7 @@ Therefore, it was decided to create a scenario around space robotics.
 
 Once the environment and the mode of access to the robots is set, the next question relates to the tasks to be solved.
 Since existing surveys demonstrated that society at large is more likely to engage in collaborative activities than competitive ones~\cite{riedo2013upgrade}, it was decided to instigate a cooperative task instead of a traditional robot competition. 
-Among the applications that are addressed at EPFL in the National Center for Competence in Research \textit{Robotics} that supports this initiative, search and rescue has a central role.
+Among the applications that are addressed at École Polytechnique Fédérale de Lausanne (EPFL) in the National Center for Competence in Research \textit{Robotics} that supports this initiative, search and rescue has a central role.
 Therefore, the following R2T2 story was developed (see illustration in Figure \ref{fig:illustration}):
 \begin{quotation}
 ``We are in 2032. A meteorite has damaged an important Martian power station and we need to assess the damage and restart the main generator. We have 16 robots on site. Each robot can be controlled by a team of engineers and space experts from Earth. Between Mars and Earth there is a delay in video transmission (between 3 minutes when Mars is closest and 21 minutes when Mars is farthest from Earth in its orbit) and direct remote control is impossible. Therefore the Earth experts need to program the robots to solve the task. We recruited 16 teams of experts from Switzerland, France, Austria, Italy, Russia and South Africa.''
@@ -254,7 +256,7 @@ It was noticed that they showed enthusiasm in testing their predetermined values
 This behavior relied on the use of states in the advanced mode. 
 The team was also given the task of programming the robot to behave in the way that their own pets would.  
 It was observed that students took more time in completing this task due to the complexity associated with the safety considerations, such as ensuring that the robot did not fall off the table. 
-Four unique behaviors were observed which included exploratory, aggressive, and seemingly irrational behavior (which students insisted was in accordance with the behavior of their animals).
+Four unique pet-like behaviors were observed which included exploratory, aggressive, and seemingly irrational behavior (which students insisted was in accordance with the behavior of their animals).
 \item Using a range of values and angle options: students had to experiment with using a range of values for the sensors.
 A track was built and robots were required to accelerate uphill and decelerate downhill. 
 Obstacle avoidance was also required.
@@ -277,14 +279,14 @@ This section presents the survey that the children had to complete, and the disc
 
 To analyze what happened during this event, the participants were asked to complete an electronic survey.
 After being asked their gender and age, they were asked if, for them, the following four sentences were true or not:
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 \item I have already taken part in online chats 	
 \item I have already seen video streaming events 	
 \item I have already done activities with robots 
 \item I got some specific training (programming, robotics) for this day, in a group or individually
 \end{itemize}
 The students were asked which task they pursued during this event, with a choice from:
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 \item Communication with other teams
 \item Supervision of video streaming
 \item Programming of the local (here) robot
@@ -294,7 +296,7 @@ The students were asked which task they pursued during this event, with a choice
 \item Other (text to be entered)
 \end{itemize}
 Finally, the students were asked to indicate their level of agreement or disagreement (four levels: totally disagree, somewhat disagree, somewhat agree, totally agree) with the following statements:
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 \item A remote robot needs to be programmed differently than a robot physically accessible near you 	
 \item Telerobotics requires more reflection on the program 	
 \item Telerobotics requires more reflection before you start programming 	
@@ -350,7 +352,8 @@ They seemed to enjoy this challenging aspect of the project, which is very impor
 In addition, nearly 90\% of the participants thought that this activity required teamwork, which obliged them to coordinate better within their teams. 
 Finally, one can see that nearly 30\% of the children disagreed with the statement ``telerobotics is closer to a real use of robots'' or that ``a remote robot need to be programmed differently than a robot physically accessible near you.''
 Both sentences, although they pull in opposite directions, imply a difference between telerobotics and other approaches.
-Some of the children disagreed with this, while a majority seems to agreed, probably seeing that telerobotics is at the same time closer to real problems than what they saw until then and has to be programmed differently than robots physically accessible.
+
+Some of the children probably saw telerobotics at the same time closer to real problems than what they saw until then, and to be programmed differently than robots physically accessible.
 One element worried us during the event: participants sometimes had to wait a long time for another group before being able to move forward with their mission. 
 This was the reason for our question about how boring telerobotics is.
 The result of the survey is encouraging, as less than 15\% found it boring.
@@ -378,7 +381,7 @@ This result is highly positive, as mentioned above, because the R2T2 event was q
   \label{fig:robotics} 
 \end{figure*}
 
-By superimposing the figures concerning competences available before the event and what the participants perceivd that they had learned, one gets the picture given in Figure~\ref{fig:learned}.
+Figure~\ref{fig:learned} shows the superimposition of figures concerning competences available before the event and what the participants perceived that they had learned.
 This confirms several other observations made above.
 In particular, we have confirmation that female participants started with lower competences in robot programming, but also learned much less than their male colleagues. 
 The situation is similar for another technical aspect of the activity, video streaming. 
@@ -482,8 +485,13 @@ It cannot be proven, but one can speculate that this also helped in getting a br
 Finally, the perception of learned lessons by the participants is impressive, especially among the participants of South Africa.
 Their inclusion in an activity involving European participants, who have a better background in technological fields, can have a clearly positive impact through emulation, instead of competition as often practiced. 
 
+\section{Future Work}
 The learning quality of engineering disciplines has to face several issues in developed countries, such as distance and cost of materials, which could be addressed through distance learning~\cite{winthrop2012new}. 
 This first R2T2 event showed how distant participation to a common event can not only impact costs of infrastructure and travel, but can bring key educational elements and promote inclusion at various levels, not only among geographically far countries, but also among disciplines and genders.
+
+mORE EVENTS INVOLING MORE COUNTRIES FROM SOUTH
+
+
 \small
 \bibliography{r2t2}{}
 
